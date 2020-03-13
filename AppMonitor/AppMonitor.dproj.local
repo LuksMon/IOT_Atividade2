@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2020/03/11 20:33:53.000.870,=C:\Users\lucas\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas</Transaction>
+    <Transaction>2020/03/11 20:34:46.000.729,C:\Users\lucas\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.pas=D:\POS\IOT\Atividade2\AppMonitor\uPrincipalMonitor.pas</Transaction>
+    <Transaction>2020/03/11 20:34:46.000.729,C:\Users\lucas\OneDrive\Documentos\Embarcadero\Studio\Projects\Unit2.fmx=D:\POS\IOT\Atividade2\AppMonitor\uPrincipalMonitor.fmx</Transaction>
+    <Transaction>2020/03/11 20:35:05.000.582,C:\Users\lucas\OneDrive\Documentos\Embarcadero\Studio\Projects\Project1.dproj=D:\POS\IOT\Atividade2\AppMonitor\AppMonitor.dproj</Transaction>
+  </Transactions>
+	<ActiveMobileDevice>
+		<Pluks iOSSimulator="iPhone5"/>
+	</ActiveMobileDevice>
+</BorlandProject>

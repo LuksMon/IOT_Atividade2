@@ -1,0 +1,48 @@
+object fPrincipal: TfPrincipal
+  Left = 0
+  Top = 0
+  ClientHeight = 480
+  ClientWidth = 640
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  DesignerMasterStyle = 0
+  object Memo1: TMemo
+    Touch.InteractiveGestures = [Pan, LongTap, DoubleTap]
+    DataDetectorTypes = []
+    Position.X = 8.000000000000000000
+    Position.Y = 192.000000000000000000
+    Size.Width = 625.000000000000000000
+    Size.Height = 281.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 1
+    Viewport.Width = 625.000000000000000000
+    Viewport.Height = 281.000000000000000000
+  end
+  object btn_Consultar: TButton
+    Position.X = 16.000000000000000000
+    Position.Y = 8.000000000000000000
+    Size.Width = 129.000000000000000000
+    Size.Height = 22.000000000000000000
+    Size.PlatformDefault = False
+    TabOrder = 2
+    Text = 'Producar Cahve'
+  end
+  object Beacon1: TBeacon
+    Enabled = True
+    ModeExtended = [iBeacons, AltBeacons, Eddystones]
+    MonitorizedRegions = <
+      item
+        UUID = '{C2D1E4D3-EA97-4DD8-90D6-F567845E1247}'
+        EddyNamespace = '00000000000000000000'
+        EddyInstance = '000000000000'
+        IDManufacturer = '-1'
+      end>
+    SPC = 0.500000000000000000
+    OnBeaconEnter = Beacon1BeaconEnter
+    OnBeaconExit = Beacon1BeaconExit
+    OnBeaconProximity = Beacon1BeaconProximity
+    Left = 48
+    Top = 304
+  end
+end

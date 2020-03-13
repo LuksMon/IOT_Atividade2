@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{DF5B1A8F-55D4-4272-8D6A-E36EA4E46AE4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="AppKey\AppKey.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="AppMonitor\AppMonitor.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="AppKey">
+        <MSBuild Projects="AppKey\AppKey.dproj"/>
+    </Target>
+    <Target Name="AppKey:Clean">
+        <MSBuild Projects="AppKey\AppKey.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppKey:Make">
+        <MSBuild Projects="AppKey\AppKey.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="AppMonitor">
+        <MSBuild Projects="AppMonitor\AppMonitor.dproj"/>
+    </Target>
+    <Target Name="AppMonitor:Clean">
+        <MSBuild Projects="AppMonitor\AppMonitor.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="AppMonitor:Make">
+        <MSBuild Projects="AppMonitor\AppMonitor.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="AppKey;AppMonitor"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="AppKey:Clean;AppMonitor:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="AppKey:Make;AppMonitor:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
